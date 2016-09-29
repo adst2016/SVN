@@ -1,0 +1,7 @@
+c:\users\adam\documents\visual studio 2015\Projects\DesignPatterns\DesignPatternsTests\bin\Debug\DesignPatternsTests.dll
+c:\users\adam\documents\visual studio 2015\Projects\DesignPatterns\DesignPatternsTests\bin\Debug\DesignPatternsTests.pdb
+c:\users\adam\documents\visual studio 2015\Projects\DesignPatterns\DesignPatternsTests\bin\Debug\DesignPatterns.dll
+c:\users\adam\documents\visual studio 2015\Projects\DesignPatterns\DesignPatternsTests\bin\Debug\DesignPatterns.pdb
+c:\users\adam\documents\visual studio 2015\Projects\DesignPatterns\DesignPatternsTests\obj\Debug\DesignPatternsTests.csprojResolveAssemblyReference.cache
+c:\users\adam\documents\visual studio 2015\Projects\DesignPatterns\DesignPatternsTests\obj\Debug\DesignPatternsTests.dll
+c:\users\adam\documents\visual studio 2015\Projects\DesignPatterns\DesignPatternsTests\obj\Debug\DesignPatternsTests.pdb
