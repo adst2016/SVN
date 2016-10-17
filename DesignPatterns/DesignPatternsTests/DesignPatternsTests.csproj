@@ -54,6 +54,7 @@
   <ItemGroup>
     <Compile Include="AbstractFactoryTests.cs" />
     <Compile Include="AdapterTests.cs" />
+    <Compile Include="ChainOfResponsibilityTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
