@@ -53,38 +53,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
-    <Compile Include="Entities\Address.cs" />
-    <Compile Include="Entities\Addresstype.cs" />
-    <Compile Include="Entities\Businessentity.cs" />
-    <Compile Include="Entities\Businessentityaddress.cs" />
-    <Compile Include="Entities\Businessentitycontact.cs" />
-    <Compile Include="Entities\Contacttype.cs" />
-    <Compile Include="Entities\Countryregion.cs" />
-    <Compile Include="Entities\Emailaddress.cs" />
-    <Compile Include="Entities\Password.cs" />
-    <Compile Include="Entities\Person.cs" />
-    <Compile Include="Entities\Personphone.cs" />
-    <Compile Include="Entities\Phonenumbertype.cs" />
-    <Compile Include="Entities\Salesterritory.cs" />
-    <Compile Include="Entities\Stateprovince.cs" />
-    <Compile Include="Entities\Vadditionalcontactinfo.cs" />
-    <Compile Include="Entities\Vstateprovincecountryregion.cs" />
-    <Compile Include="Mappings\AddressMap.cs" />
-    <Compile Include="Mappings\AddresstypeMap.cs" />
-    <Compile Include="Mappings\BusinessentityaddressMap.cs" />
-    <Compile Include="Mappings\BusinessentitycontactMap.cs" />
-    <Compile Include="Mappings\BusinessentityMap.cs" />
-    <Compile Include="Mappings\ContacttypeMap.cs" />
-    <Compile Include="Mappings\CountryregionMap.cs" />
-    <Compile Include="Mappings\EmailaddressMap.cs" />
-    <Compile Include="Mappings\PasswordMap.cs" />
-    <Compile Include="Mappings\PersonMap.cs" />
-    <Compile Include="Mappings\PersonphoneMap.cs" />
-    <Compile Include="Mappings\PhonenumbertypeMap.cs" />
-    <Compile Include="Mappings\SalesterritoryMap.cs" />
-    <Compile Include="Mappings\StateprovinceMap.cs" />
-    <Compile Include="Mappings\VadditionalcontactinfoMap.cs" />
-    <Compile Include="Mappings\VstateprovincecountryregionMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -92,6 +60,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Domain\" />
+    <Folder Include="Entities\" />
+    <Folder Include="Mappings\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="hibernate.cfg.xml">

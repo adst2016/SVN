@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using NHibernate;
 using NHibernate.Cfg;
-using NHibernate01.Domain;
+
 using FluentNHibernate;
-using NHibernate01.Mappings;
+
 
 namespace NHibernate01
 {
@@ -20,14 +20,14 @@ namespace NHibernate01
 
             //var sessionFactory = cfg.BuildSessionFactory();
 
-            var cfgFluently = FluentNHibernate.Cfg.Fluently.Configure(cfg).Mappings(m => m.FluentMappings.AddFromAssemblyOf<PersonMap>());
+            //var cfgFluently = FluentNHibernate.Cfg.Fluently.Configure(cfg).Mappings(m => m.FluentMappings.AddFromAssemblyOf<PersonMap>());
 
 
-            var sessionFactory = cfgFluently.BuildSessionFactory();
+            //var sessionFactory = cfgFluently.BuildSessionFactory();
 
-            ISession session = sessionFactory.OpenSession();
+            //ISession session = sessionFactory.OpenSession();
 
-            var person = session.Get<Person>(1);
+            //var person = session.Get<Person>(1);
 
         }
 
