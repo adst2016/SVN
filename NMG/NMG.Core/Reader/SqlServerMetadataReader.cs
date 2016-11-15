@@ -144,8 +144,10 @@ from information_schema.columns c
 			try {
 				using (conn) {
 					var tableCommand = conn.CreateCommand();
-					tableCommand.CommandText = String.Format("select table_name from information_schema.tables where table_type in ('BASE TABLE','VIEW') AND TABLE_SCHEMA = '{0}'", owner);
-					var sqlDataReader = tableCommand.ExecuteReader(CommandBehavior.CloseConnection);
+                    //TODO: Dodaæ parametr na widoki
+                    //tableCommand.CommandText = String.Format("select table_name from information_schema.tables where table_type in ('BASE TABLE','VIEW') AND TABLE_SCHEMA = '{0}'", owner);
+                    tableCommand.CommandText = String.Format("select table_name from information_schema.tables where table_type in ('BASE TABLE') AND TABLE_SCHEMA = '{0}'", owner);
+                    var sqlDataReader = tableCommand.ExecuteReader(CommandBehavior.CloseConnection);
 					while (sqlDataReader.Read()) {
 						var tableName = sqlDataReader.GetString(0);
 						tables.Add(new Table { Name = tableName });
