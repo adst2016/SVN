@@ -1,0 +1,37 @@
+{
+	"_type": "Project",
+	"_id": "AAAAAAFF+h6SjaM2Hec=",
+	"name": "Untitled",
+	"ownedElements": [
+		{
+			"_type": "UMLModel",
+			"_id": "AAAAAAFYmAkM6KoWJGg=",
+			"_parent": {
+				"$ref": "AAAAAAFF+h6SjaM2Hec="
+			},
+			"name": "Model1",
+			"visibility": "public"
+		},
+		{
+			"_type": "UMLModel",
+			"_id": "AAAAAAFYmBFG2apPpE8=",
+			"_parent": {
+				"$ref": "AAAAAAFF+h6SjaM2Hec="
+			},
+			"name": "Model2",
+			"ownedElements": [
+				{
+					"_type": "UMLClassDiagram",
+					"_id": "AAAAAAFYmBFG2apQZcg=",
+					"_parent": {
+						"$ref": "AAAAAAFYmBFG2apPpE8="
+					},
+					"name": "ClassDiagram_01",
+					"visible": true,
+					"defaultDiagram": false
+				}
+			],
+			"visibility": "public"
+		}
+	]
+}
