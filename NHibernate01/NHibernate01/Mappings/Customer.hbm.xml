@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="NHibernate01" namespace="NHibernate01.Domain" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="Customer" table="Customer" lazy="true" >
+    <id name="CustomerId" column="CustomerID">
+      <generator class="identity" />
+    </id>
+    <many-to-one name="FkCustomerPersonPersonId">
+      <column name="PersonID" sql-type="int" not-null="false" />
+    </many-to-one>
+    <many-to-one name="FkCustomerStoreStoreId">
+      <column name="StoreID" sql-type="int" not-null="false" />
+    </many-to-one>
+    <many-to-one name="FkCustomerSalesTerritoryTerritoryId">
+      <column name="TerritoryID" sql-type="int" not-null="false" />
+    </many-to-one>
+    <property name="AccountNumber">
+      <column name="AccountNumber" sql-type="varchar" not-null="true" />
+    </property>
+    <property name="Rowguid">
+      <column name="rowguid" sql-type="uniqueidentifier" not-null="true" />
+    </property>
+    <property name="ModifiedDate">
+      <column name="ModifiedDate" sql-type="datetime" not-null="true" />
+    </property>
+  </class>
+</hibernate-mapping>

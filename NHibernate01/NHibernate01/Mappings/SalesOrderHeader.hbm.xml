@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="NHibernate01" namespace="NHibernate01.Domain" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="SalesOrderHeader" table="SalesOrderHeader" lazy="true" >
+    <id name="SalesOrderId" column="SalesOrderID">
+      <generator class="identity" />
+    </id>
+    <many-to-one name="FkSalesOrderHeaderCustomerCustomerId">
+      <column name="CustomerID" sql-type="int" not-null="true" />
+    </many-to-one>
+    <many-to-one name="FkSalesOrderHeaderSalesPersonSalesPersonId">
+      <column name="SalesPersonID" sql-type="int" not-null="false" />
+    </many-to-one>
+    <many-to-one name="FkSalesOrderHeaderSalesTerritoryTerritoryId">
+      <column name="TerritoryID" sql-type="int" not-null="false" />
+    </many-to-one>
+    <many-to-one name="FkSalesOrderHeaderAddressBillToAddressId">
+      <column name="BillToAddressID" sql-type="int" not-null="true" />
+    </many-to-one>
+    <many-to-one name="FkSalesOrderHeaderAddressShipToAddressId">
+      <column name="ShipToAddressID" sql-type="int" not-null="true" />
+    </many-to-one>
+    <many-to-one name="FkSalesOrderHeaderShipMethodShipMethodId">
+      <column name="ShipMethodID" sql-type="int" not-null="true" />
+    </many-to-one>
+    <many-to-one name="FkSalesOrderHeaderCreditCardCreditCardId">
+      <column name="CreditCardID" sql-type="int" not-null="false" />
+    </many-to-one>
+    <many-to-one name="FkSalesOrderHeaderCurrencyRateCurrencyRateId">
+      <column name="CurrencyRateID" sql-type="int" not-null="false" />
+    </many-to-one>
+    <property name="RevisionNumber">
+      <column name="RevisionNumber" sql-type="tinyint" not-null="true" />
+    </property>
+    <property name="OrderDate">
+      <column name="OrderDate" sql-type="datetime" not-null="true" />
+    </property>
+    <property name="DueDate">
+      <column name="DueDate" sql-type="datetime" not-null="true" />
+    </property>
+    <property name="ShipDate">
+      <column name="ShipDate" sql-type="datetime" not-null="false" />
+    </property>
+    <property name="Status">
+      <column name="Status" sql-type="tinyint" not-null="true" />
+    </property>
+    <property name="OnlineOrderFlag">
+      <column name="OnlineOrderFlag" sql-type="bit" not-null="true" />
+    </property>
+    <property name="SalesOrderNumber">
+      <column name="SalesOrderNumber" sql-type="nvarchar" not-null="true" />
+    </property>
+    <property name="PurchaseOrderNumber">
+      <column name="PurchaseOrderNumber" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="AccountNumber">
+      <column name="AccountNumber" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="CreditCardApprovalCode">
+      <column name="CreditCardApprovalCode" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="SubTotal">
+      <column name="SubTotal" sql-type="money" not-null="true" />
+    </property>
+    <property name="TaxAmt">
+      <column name="TaxAmt" sql-type="money" not-null="true" />
+    </property>
+    <property name="Freight">
+      <column name="Freight" sql-type="money" not-null="true" />
+    </property>
+    <property name="TotalDue">
+      <column name="TotalDue" sql-type="money" not-null="true" />
+    </property>
+    <property name="Comment">
+      <column name="Comment" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="Rowguid">
+      <column name="rowguid" sql-type="uniqueidentifier" not-null="true" />
+    </property>
+    <property name="ModifiedDate">
+      <column name="ModifiedDate" sql-type="datetime" not-null="true" />
+    </property>
+  </class>
+</hibernate-mapping>

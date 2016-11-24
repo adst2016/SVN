@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="NHibernate01" namespace="NHibernate01.Domain" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="ProductReview" table="ProductReview" lazy="true" >
+    <id name="ProductReviewId" column="ProductReviewID">
+      <generator class="identity" />
+    </id>
+    <many-to-one name="FkProductReviewProductProductId">
+      <column name="ProductID" sql-type="int" not-null="true" />
+    </many-to-one>
+    <property name="ReviewerName">
+      <column name="ReviewerName" sql-type="nvarchar" not-null="true" />
+    </property>
+    <property name="ReviewDate">
+      <column name="ReviewDate" sql-type="datetime" not-null="true" />
+    </property>
+    <property name="EmailAddress">
+      <column name="EmailAddress" sql-type="nvarchar" not-null="true" />
+    </property>
+    <property name="Rating">
+      <column name="Rating" sql-type="int" not-null="true" />
+    </property>
+    <property name="Comments">
+      <column name="Comments" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="ModifiedDate">
+      <column name="ModifiedDate" sql-type="datetime" not-null="true" />
+    </property>
+  </class>
+</hibernate-mapping>

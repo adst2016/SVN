@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="NHibernate01" namespace="NHibernate01.Domain" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="SalesPerson" table="SalesPerson" lazy="true" >
+    <id name="BusinessEntityId" column="BusinessEntityID" />
+    <many-to-one name="FkSalesPersonEmployeeBusinessEntityId">
+      <column name="BusinessEntityID" sql-type="int" not-null="true" />
+    </many-to-one>
+    <many-to-one name="FkSalesPersonSalesTerritoryTerritoryId">
+      <column name="TerritoryID" sql-type="int" not-null="false" />
+    </many-to-one>
+    <property name="SalesQuota">
+      <column name="SalesQuota" sql-type="money" not-null="false" />
+    </property>
+    <property name="Bonus">
+      <column name="Bonus" sql-type="money" not-null="true" />
+    </property>
+    <property name="CommissionPct">
+      <column name="CommissionPct" sql-type="smallmoney" not-null="true" />
+    </property>
+    <property name="SalesYtd">
+      <column name="SalesYTD" sql-type="money" not-null="true" />
+    </property>
+    <property name="SalesLastYear">
+      <column name="SalesLastYear" sql-type="money" not-null="true" />
+    </property>
+    <property name="Rowguid">
+      <column name="rowguid" sql-type="uniqueidentifier" not-null="true" />
+    </property>
+    <property name="ModifiedDate">
+      <column name="ModifiedDate" sql-type="datetime" not-null="true" />
+    </property>
+  </class>
+</hibernate-mapping>

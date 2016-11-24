@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="NHibernate01" namespace="NHibernate01.Domain" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="ContactType" table="ContactType" lazy="true" >
+    <id name="ContactTypeId" column="ContactTypeID">
+      <generator class="identity" />
+    </id>
+    <property name="Name">
+      <column name="Name" sql-type="nvarchar" not-null="true" />
+    </property>
+    <property name="ModifiedDate">
+      <column name="ModifiedDate" sql-type="datetime" not-null="true" />
+    </property>
+  </class>
+</hibernate-mapping>

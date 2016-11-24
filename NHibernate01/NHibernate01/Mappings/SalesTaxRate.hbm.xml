@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="NHibernate01" namespace="NHibernate01.Domain" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="SalesTaxRate" table="SalesTaxRate" lazy="true" >
+    <id name="SalesTaxRateId" column="SalesTaxRateID">
+      <generator class="identity" />
+    </id>
+    <many-to-one name="FkSalesTaxRateStateProvinceStateProvinceId">
+      <column name="StateProvinceID" sql-type="int" not-null="true" />
+    </many-to-one>
+    <property name="TaxType">
+      <column name="TaxType" sql-type="tinyint" not-null="true" />
+    </property>
+    <property name="TaxRate">
+      <column name="TaxRate" sql-type="smallmoney" not-null="true" />
+    </property>
+    <property name="Name">
+      <column name="Name" sql-type="nvarchar" not-null="true" />
+    </property>
+    <property name="Rowguid">
+      <column name="rowguid" sql-type="uniqueidentifier" not-null="true" />
+    </property>
+    <property name="ModifiedDate">
+      <column name="ModifiedDate" sql-type="datetime" not-null="true" />
+    </property>
+  </class>
+</hibernate-mapping>

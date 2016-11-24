@@ -101,7 +101,8 @@ namespace NMG.Core.Generator
                 XmlElement element = column.IsForeignKey && applicationPreferences.IncludeForeignKeys ? xmldoc.CreateElement("many-to-one") 
                                                                                                       : xmldoc.CreateElement("property");
                 if (column.IsForeignKey && applicationPreferences.IncludeForeignKeys && applicationPreferences.NameFkAsForeignTable)
-                    element.SetAttribute("name", Formatter.FormatSingular(column.ForeignKeyTableName));
+                    //element.SetAttribute("name", Formatter.FormatSingular(column.ForeignKeyTableName));
+                    element.SetAttribute("name", Formatter.FormatSingular(column.ConstraintName));
                 else
                     element.SetAttribute("name", Formatter.FormatText(column.Name));
 
@@ -118,20 +119,20 @@ namespace NMG.Core.Generator
             }
 
 
-            foreach (var hasMany in Table.HasManyRelationships)
-            {
-                XmlElement bagElement = applicationPreferences.ForeignEntityCollectionType.Contains("Set") ? xmldoc.CreateElement("set") : xmldoc.CreateElement("bag");
-                bagElement.SetAttribute("name", Formatter.FormatPlural(hasMany.Reference));
-                if (applicationPreferences.IncludeHasMany)
-                    bagElement.SetAttribute("inverse", "true");
-                classElement.AppendChild(bagElement);
-                XmlElement keyElement = xmldoc.CreateElement("key");
-                keyElement.SetAttribute("column", hasMany.ReferenceColumn);
-                bagElement.AppendChild(keyElement);
-                XmlElement oneToManyElement = xmldoc.CreateElement("one-to-many");
-                oneToManyElement.SetAttribute("class", Formatter.FormatSingular(hasMany.Reference));
-                bagElement.AppendChild(oneToManyElement);
-            }
+            //foreach (var hasMany in Table.HasManyRelationships)
+            //{
+            //    XmlElement bagElement = applicationPreferences.ForeignEntityCollectionType.Contains("Set") ? xmldoc.CreateElement("set") : xmldoc.CreateElement("bag");
+            //    bagElement.SetAttribute("name", Formatter.FormatPlural(hasMany.Reference));
+            //    if (applicationPreferences.IncludeHasMany)
+            //        bagElement.SetAttribute("inverse", "true");
+            //    classElement.AppendChild(bagElement);
+            //    XmlElement keyElement = xmldoc.CreateElement("key");
+            //    keyElement.SetAttribute("column", hasMany.ReferenceColumn);
+            //    bagElement.AppendChild(keyElement);
+            //    XmlElement oneToManyElement = xmldoc.CreateElement("one-to-many");
+            //    oneToManyElement.SetAttribute("class", Formatter.FormatSingular(hasMany.Reference));
+            //    bagElement.AppendChild(oneToManyElement);
+            //}
 
             return xmldoc;
         }

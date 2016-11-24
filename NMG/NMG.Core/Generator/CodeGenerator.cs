@@ -281,7 +281,10 @@ namespace NMG.Core.Generator
                 foreach (var fk in Table.Columns.Where(c => c.IsForeignKey && !c.IsPrimaryKey))
                 {
                     var typeName = appPrefs.ClassNamePrefix + pascalCaseTextFormatter.FormatSingular(fk.ForeignKeyTableName);
-                    var propertyName = Formatter.FormatSingular(fk.ForeignKeyTableName);
+
+                    //var propertyName = Formatter.FormatSingular(fk.ForeignKeyTableName);
+                    var propertyName = Formatter.FormatSingular(fk.ConstraintName);
+
                     var fieldName = FixPropertyWithSameClassName(propertyName, Table.Name);
                     if (lastOne != fieldName)
                         newType.Members.Add(codeGenerationHelper.CreateAutoProperty(typeName, fieldName, appPrefs.UseLazy));

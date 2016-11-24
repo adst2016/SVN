@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="NHibernate01" namespace="NHibernate01.Domain" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="Document" table="Document" lazy="true" >
+    <id name="DocumentNode" column="DocumentNode" />
+    <many-to-one name="FkDocumentEmployeeOwner">
+      <column name="Owner" sql-type="int" not-null="true" />
+    </many-to-one>
+    <property name="DocumentLevel">
+      <column name="DocumentLevel" sql-type="smallint" not-null="false" />
+    </property>
+    <property name="Title">
+      <column name="Title" sql-type="nvarchar" not-null="true" />
+    </property>
+    <property name="FolderFlag">
+      <column name="FolderFlag" sql-type="bit" not-null="true" />
+    </property>
+    <property name="FileName">
+      <column name="FileName" sql-type="nvarchar" not-null="true" />
+    </property>
+    <property name="FileExtension">
+      <column name="FileExtension" sql-type="nvarchar" not-null="true" />
+    </property>
+    <property name="Revision">
+      <column name="Revision" sql-type="nchar" not-null="true" />
+    </property>
+    <property name="ChangeNumber">
+      <column name="ChangeNumber" sql-type="int" not-null="true" />
+    </property>
+    <property name="Status">
+      <column name="Status" sql-type="tinyint" not-null="true" />
+    </property>
+    <property name="DocumentSummary">
+      <column name="DocumentSummary" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="DocumentBin">
+      <column name="DocumentBin" sql-type="varbinary" not-null="false" />
+    </property>
+    <property name="Rowguid">
+      <column name="rowguid" sql-type="uniqueidentifier" not-null="true" unique="true" />
+    </property>
+    <property name="ModifiedDate">
+      <column name="ModifiedDate" sql-type="datetime" not-null="true" />
+    </property>
+  </class>
+</hibernate-mapping>

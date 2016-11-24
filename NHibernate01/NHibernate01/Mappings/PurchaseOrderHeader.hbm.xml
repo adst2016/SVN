@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="NHibernate01" namespace="NHibernate01.Domain" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="PurchaseOrderHeader" table="PurchaseOrderHeader" lazy="true" >
+    <id name="PurchaseOrderId" column="PurchaseOrderID">
+      <generator class="identity" />
+    </id>
+    <many-to-one name="FkPurchaseOrderHeaderEmployeeEmployeeId">
+      <column name="EmployeeID" sql-type="int" not-null="true" />
+    </many-to-one>
+    <many-to-one name="FkPurchaseOrderHeaderVendorVendorId">
+      <column name="VendorID" sql-type="int" not-null="true" />
+    </many-to-one>
+    <many-to-one name="FkPurchaseOrderHeaderShipMethodShipMethodId">
+      <column name="ShipMethodID" sql-type="int" not-null="true" />
+    </many-to-one>
+    <property name="RevisionNumber">
+      <column name="RevisionNumber" sql-type="tinyint" not-null="true" />
+    </property>
+    <property name="Status">
+      <column name="Status" sql-type="tinyint" not-null="true" />
+    </property>
+    <property name="OrderDate">
+      <column name="OrderDate" sql-type="datetime" not-null="true" />
+    </property>
+    <property name="ShipDate">
+      <column name="ShipDate" sql-type="datetime" not-null="false" />
+    </property>
+    <property name="SubTotal">
+      <column name="SubTotal" sql-type="money" not-null="true" />
+    </property>
+    <property name="TaxAmt">
+      <column name="TaxAmt" sql-type="money" not-null="true" />
+    </property>
+    <property name="Freight">
+      <column name="Freight" sql-type="money" not-null="true" />
+    </property>
+    <property name="TotalDue">
+      <column name="TotalDue" sql-type="money" not-null="true" />
+    </property>
+    <property name="ModifiedDate">
+      <column name="ModifiedDate" sql-type="datetime" not-null="true" />
+    </property>
+  </class>
+</hibernate-mapping>

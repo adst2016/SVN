@@ -7,7 +7,7 @@ using NHibernate;
 using NHibernate.Cfg;
 
 using FluentNHibernate;
-
+using NHibernate01.Domain;
 
 namespace NHibernate01
 {
@@ -16,18 +16,30 @@ namespace NHibernate01
         public void GetID()
         {
             var cfg = new Configuration();
-            cfg.Configure();
 
-            //var sessionFactory = cfg.BuildSessionFactory();
+            //cfg.AddAssembly(typeof(Class1).Assembly);
+            
+
+            cfg.Configure();            
+
+            var sessionFactory = cfg.BuildSessionFactory();
+
+            
+
 
             //var cfgFluently = FluentNHibernate.Cfg.Fluently.Configure(cfg).Mappings(m => m.FluentMappings.AddFromAssemblyOf<PersonMap>());
 
 
             //var sessionFactory = cfgFluently.BuildSessionFactory();
 
-            //ISession session = sessionFactory.OpenSession();
+            ISession session = sessionFactory.OpenSession();
 
-            //var person = session.Get<Person>(1);
+            //todo: Dodać schema do mapowań xml
+            //todo: Uporządkować problem z SalesOrderDetail i Document.
+
+
+
+            var person = session.Get<Person>(1);
 
         }
 

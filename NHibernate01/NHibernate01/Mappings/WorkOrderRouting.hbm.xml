@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="NHibernate01" namespace="NHibernate01.Domain" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="WorkOrderRouting" table="WorkOrderRouting" lazy="true" >
+    <composite-id>
+      <key-property name="WorkOrderId" column="WorkOrderID" />
+      <key-property name="ProductId" column="ProductID" />
+      <key-property name="OperationSequence" column="OperationSequence" />
+    </composite-id>
+    <many-to-one name="FkWorkOrderRoutingWorkOrderWorkOrderId">
+      <column name="WorkOrderID" sql-type="int" not-null="true" />
+    </many-to-one>
+    <many-to-one name="FkWorkOrderRoutingLocationLocationId">
+      <column name="LocationID" sql-type="smallint" not-null="true" />
+    </many-to-one>
+    <property name="ScheduledStartDate">
+      <column name="ScheduledStartDate" sql-type="datetime" not-null="true" />
+    </property>
+    <property name="ScheduledEndDate">
+      <column name="ScheduledEndDate" sql-type="datetime" not-null="true" />
+    </property>
+    <property name="ActualStartDate">
+      <column name="ActualStartDate" sql-type="datetime" not-null="false" />
+    </property>
+    <property name="ActualEndDate">
+      <column name="ActualEndDate" sql-type="datetime" not-null="false" />
+    </property>
+    <property name="ActualResourceHrs">
+      <column name="ActualResourceHrs" sql-type="decimal" not-null="false" />
+    </property>
+    <property name="PlannedCost">
+      <column name="PlannedCost" sql-type="money" not-null="true" />
+    </property>
+    <property name="ActualCost">
+      <column name="ActualCost" sql-type="money" not-null="false" />
+    </property>
+    <property name="ModifiedDate">
+      <column name="ModifiedDate" sql-type="datetime" not-null="true" />
+    </property>
+  </class>
+</hibernate-mapping>

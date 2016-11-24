@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="NHibernate01" namespace="NHibernate01.Domain" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="JobCandidate" table="JobCandidate" lazy="true" >
+    <id name="JobCandidateId" column="JobCandidateID">
+      <generator class="identity" />
+    </id>
+    <many-to-one name="FkJobCandidateEmployeeBusinessEntityId">
+      <column name="BusinessEntityID" sql-type="int" not-null="false" />
+    </many-to-one>
+    <property name="Resume">
+      <column name="Resume" sql-type="xml" not-null="false" />
+    </property>
+    <property name="ModifiedDate">
+      <column name="ModifiedDate" sql-type="datetime" not-null="true" />
+    </property>
+  </class>
+</hibernate-mapping>

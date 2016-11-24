@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="NHibernate01" namespace="NHibernate01.Domain" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="StateProvince" table="StateProvince" lazy="true" >
+    <id name="StateProvinceId" column="StateProvinceID">
+      <generator class="identity" />
+    </id>
+    <many-to-one name="FkStateProvinceCountryRegionCountryRegionCode">
+      <column name="CountryRegionCode" sql-type="nvarchar" not-null="true" />
+    </many-to-one>
+    <many-to-one name="FkStateProvinceSalesTerritoryTerritoryId">
+      <column name="TerritoryID" sql-type="int" not-null="true" />
+    </many-to-one>
+    <property name="StateProvinceCode">
+      <column name="StateProvinceCode" sql-type="nchar" not-null="true" />
+    </property>
+    <property name="IsOnlyStateProvinceFlag">
+      <column name="IsOnlyStateProvinceFlag" sql-type="bit" not-null="true" />
+    </property>
+    <property name="Name">
+      <column name="Name" sql-type="nvarchar" not-null="true" />
+    </property>
+    <property name="Rowguid">
+      <column name="rowguid" sql-type="uniqueidentifier" not-null="true" />
+    </property>
+    <property name="ModifiedDate">
+      <column name="ModifiedDate" sql-type="datetime" not-null="true" />
+    </property>
+  </class>
+</hibernate-mapping>
