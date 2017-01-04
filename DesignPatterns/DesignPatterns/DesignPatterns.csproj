@@ -54,6 +54,7 @@
     <Compile Include="StructuralPatterns\Decorator.cs" />
     <Compile Include="StructuralPatterns\Facade.cs" />
     <Compile Include="StructuralPatterns\Flyweight.cs" />
+    <Compile Include="StructuralPatterns\Proxy.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

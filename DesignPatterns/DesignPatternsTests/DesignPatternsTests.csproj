@@ -66,6 +66,7 @@
     <Compile Include="StructuralPatterns\DecoratorTests.cs" />
     <Compile Include="StructuralPatterns\FacadeTests.cs" />
     <Compile Include="StructuralPatterns\FlyweightTests.cs" />
+    <Compile Include="StructuralPatterns\ProxyTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DesignPatterns\DesignPatterns.csproj">
