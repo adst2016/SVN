@@ -61,6 +61,11 @@
     <Compile Include="PrototypeTests.cs" />
     <Compile Include="SingletonTests.cs" />
     <Compile Include="StrategyTests.cs" />
+    <Compile Include="StructuralPatterns\BridgeTests.cs" />
+    <Compile Include="StructuralPatterns\CompositeTests.cs" />
+    <Compile Include="StructuralPatterns\DecoratorTests.cs" />
+    <Compile Include="StructuralPatterns\FacadeTests.cs" />
+    <Compile Include="StructuralPatterns\FlyweightTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DesignPatterns\DesignPatterns.csproj">
@@ -68,6 +73,7 @@
       <Name>DesignPatterns</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>
