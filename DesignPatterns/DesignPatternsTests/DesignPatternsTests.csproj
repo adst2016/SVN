@@ -62,6 +62,7 @@
     <Compile Include="BehavioralPatterns\ObserverTests.cs" />
     <Compile Include="BehavioralPatterns\StateTests.cs" />
     <Compile Include="BehavioralPatterns\TemplateMethodTests.cs" />
+    <Compile Include="BehavioralPatterns\VisitorTests.cs" />
     <Compile Include="BuilderTests.cs" />
     <Compile Include="ChainOfResponsibilityTests.cs" />
     <Compile Include="FactoryMethodTests.cs" />
