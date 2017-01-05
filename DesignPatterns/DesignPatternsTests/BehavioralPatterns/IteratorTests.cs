@@ -1,6 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using DesignPatterns.BehavioralPatterns;
-using System.Collections;
 using System;
 
 namespace DesignPatternsTests.BehavioralPatterns

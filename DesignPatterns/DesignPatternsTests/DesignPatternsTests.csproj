@@ -57,6 +57,7 @@
     <Compile Include="BehavioralPatterns\CommandTests.cs" />
     <Compile Include="BehavioralPatterns\InterpreterTests.cs" />
     <Compile Include="BehavioralPatterns\IteratorTests.cs" />
+    <Compile Include="BehavioralPatterns\MediatorTests.cs" />
     <Compile Include="BuilderTests.cs" />
     <Compile Include="ChainOfResponsibilityTests.cs" />
     <Compile Include="FactoryMethodTests.cs" />

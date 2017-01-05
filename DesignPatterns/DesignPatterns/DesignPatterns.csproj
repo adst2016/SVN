@@ -45,6 +45,7 @@
     <Compile Include="BehavioralPatterns\Command.cs" />
     <Compile Include="BehavioralPatterns\Interpreter.cs" />
     <Compile Include="BehavioralPatterns\Iterator.cs" />
+    <Compile Include="BehavioralPatterns\Mediator.cs" />
     <Compile Include="Builder.cs" />
     <Compile Include="ChainOfResponsibility.cs" />
     <Compile Include="FactoryMethod.cs" />
