@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DesignPatterns
+namespace DesignPatterns.BehavioralPatterns
 {
     public abstract class Strategy
     {
@@ -27,10 +27,10 @@ namespace DesignPatterns
         }
     }
 
-    public class Context
+    public class StrategyContext
     {
         private Strategy _strategy;
-        public Context(Strategy strategy)
+        public StrategyContext(Strategy strategy)
         {
             this._strategy = strategy;
         }

@@ -1,8 +1,8 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using DesignPatterns;
+using DesignPatterns.CreationalPatterns;
 
-namespace DesignPatternsTests
+namespace DesignPatternsTests.CreationalPatterns
 {
     [TestClass]
     public class SingletonTests

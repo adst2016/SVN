@@ -1,7 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using DesignPatterns;
+using DesignPatterns.StructuralPatterns;
 
-namespace DesignPatternsTests
+namespace DesignPatternsTests.StructuralPatterns
 {
     [TestClass]
     public class AdapterTests

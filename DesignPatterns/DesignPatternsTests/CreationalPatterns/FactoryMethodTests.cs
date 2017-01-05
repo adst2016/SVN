@@ -1,8 +1,8 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using DesignPatterns;
+using DesignPatterns.CreationalPatterns;
 using System;
 
-namespace DesignPatternsTests
+namespace DesignPatternsTests.CreationalPatterns
 {
     [TestClass]
     public class FactoryMethodTests

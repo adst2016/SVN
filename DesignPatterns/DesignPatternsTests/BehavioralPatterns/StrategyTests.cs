@@ -1,7 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using DesignPatterns;
+using DesignPatterns.BehavioralPatterns;
 
-namespace DesignPatternsTests
+namespace DesignPatternsTests.BehavioralPatterns
 {
     [TestClass]
     public class StrategyTests
@@ -9,14 +9,14 @@ namespace DesignPatternsTests
         [TestMethod]
         public void StrategyTest_01()
         {
-            Context context;
+            StrategyContext context;
 
             Strategy strategyA = new ConcreteStrategyA();
-            context = new Context(strategyA);
+            context = new StrategyContext(strategyA);
             context.ContextInterface();
 
             Strategy strategyB = new ConcreteStrategyB();
-            context = new Context(strategyB);
+            context = new StrategyContext(strategyB);
             context.ContextInterface();
 
         }

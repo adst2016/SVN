@@ -1,7 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using DesignPatterns;
+using DesignPatterns.BehavioralPatterns;
 
-namespace DesignPatternsTests
+namespace DesignPatternsTests.BehavioralPatterns
 {
     [TestClass]
     public class ChainOfResponsibilityTests

@@ -52,8 +52,8 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="AbstractFactoryTests.cs" />
-    <Compile Include="AdapterTests.cs" />
+    <Compile Include="CreationalPatterns\AbstractFactoryTests.cs" />
+    <Compile Include="StructuralPatterns\AdapterTests.cs" />
     <Compile Include="BehavioralPatterns\CommandTests.cs" />
     <Compile Include="BehavioralPatterns\InterpreterTests.cs" />
     <Compile Include="BehavioralPatterns\IteratorTests.cs" />
@@ -63,13 +63,13 @@
     <Compile Include="BehavioralPatterns\StateTests.cs" />
     <Compile Include="BehavioralPatterns\TemplateMethodTests.cs" />
     <Compile Include="BehavioralPatterns\VisitorTests.cs" />
-    <Compile Include="BuilderTests.cs" />
-    <Compile Include="ChainOfResponsibilityTests.cs" />
-    <Compile Include="FactoryMethodTests.cs" />
+    <Compile Include="CreationalPatterns\BuilderTests.cs" />
+    <Compile Include="BehavioralPatterns\ChainOfResponsibilityTests.cs" />
+    <Compile Include="CreationalPatterns\FactoryMethodTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="PrototypeTests.cs" />
-    <Compile Include="SingletonTests.cs" />
-    <Compile Include="StrategyTests.cs" />
+    <Compile Include="CreationalPatterns\PrototypeTests.cs" />
+    <Compile Include="CreationalPatterns\SingletonTests.cs" />
+    <Compile Include="BehavioralPatterns\StrategyTests.cs" />
     <Compile Include="StructuralPatterns\BridgeTests.cs" />
     <Compile Include="StructuralPatterns\CompositeTests.cs" />
     <Compile Include="StructuralPatterns\DecoratorTests.cs" />

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DesignPatterns
+namespace DesignPatterns.CreationalPatterns
 {
     //Wzorzec Abstract Factory
     public abstract class AbstractFactory
