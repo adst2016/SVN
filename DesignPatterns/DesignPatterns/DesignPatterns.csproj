@@ -42,6 +42,9 @@
   <ItemGroup>
     <Compile Include="AbstractFactory.cs" />
     <Compile Include="Adapter.cs" />
+    <Compile Include="BehavioralPatterns\Command.cs" />
+    <Compile Include="BehavioralPatterns\Interpreter.cs" />
+    <Compile Include="BehavioralPatterns\Iterator.cs" />
     <Compile Include="Builder.cs" />
     <Compile Include="ChainOfResponsibility.cs" />
     <Compile Include="FactoryMethod.cs" />
@@ -56,6 +59,7 @@
     <Compile Include="StructuralPatterns\Flyweight.cs" />
     <Compile Include="StructuralPatterns\Proxy.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
