@@ -49,6 +49,7 @@
     <Compile Include="BehavioralPatterns\Memento.cs" />
     <Compile Include="BehavioralPatterns\Observer.cs" />
     <Compile Include="BehavioralPatterns\State.cs" />
+    <Compile Include="BehavioralPatterns\TemplateMethod.cs" />
     <Compile Include="Builder.cs" />
     <Compile Include="ChainOfResponsibility.cs" />
     <Compile Include="FactoryMethod.cs" />
