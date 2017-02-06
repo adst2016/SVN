@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NHibernateAutoMapping01", "NHibernateAutoMapping01\NHibernateAutoMapping01.csproj", "{87A47BF9-79A2-474F-A860-0FF4929CC257}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NHibernateAutoMapping01Tests", "NHibernateAutoMapping01Tests\NHibernateAutoMapping01Tests.csproj", "{ED1552C9-8F2E-4E83-93A4-6F8C1FB84CF3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{87A47BF9-79A2-474F-A860-0FF4929CC257}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87A47BF9-79A2-474F-A860-0FF4929CC257}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87A47BF9-79A2-474F-A860-0FF4929CC257}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87A47BF9-79A2-474F-A860-0FF4929CC257}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED1552C9-8F2E-4E83-93A4-6F8C1FB84CF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED1552C9-8F2E-4E83-93A4-6F8C1FB84CF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED1552C9-8F2E-4E83-93A4-6F8C1FB84CF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED1552C9-8F2E-4E83-93A4-6F8C1FB84CF3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
