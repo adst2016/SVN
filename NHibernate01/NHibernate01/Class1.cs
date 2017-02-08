@@ -20,15 +20,12 @@ namespace NHibernate01
             //cfg.AddAssembly(typeof(Class1).Assembly);
             
 
-            cfg.Configure();            
+            cfg.Configure();
 
             var sessionFactory = cfg.BuildSessionFactory();
 
-            
-
 
             //var cfgFluently = FluentNHibernate.Cfg.Fluently.Configure(cfg).Mappings(m => m.FluentMappings.AddFromAssemblyOf<PersonMap>());
-
 
             //var sessionFactory = cfgFluently.BuildSessionFactory();
 

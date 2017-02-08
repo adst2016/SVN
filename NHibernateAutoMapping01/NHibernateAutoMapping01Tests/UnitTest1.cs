@@ -14,5 +14,13 @@ namespace NHibernateAutoMapping01Tests
             class1.CreateDataBase();
 
         }
+
+        [TestMethod]
+        public void TestMethod2()
+        {
+            Class1 class1 = new Class1();
+            class1.CreateDataBase2();
+
+        }
     }
 }

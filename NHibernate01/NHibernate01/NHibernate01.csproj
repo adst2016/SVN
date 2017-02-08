@@ -132,6 +132,7 @@
   <ItemGroup>
     <Content Include="hibernate.cfg.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
     </Content>
     <Content Include="Mappings\BillOfMaterials.hbm.xml" />
     <EmbeddedResource Include="Mappings\Address.hbm.xml">
@@ -159,7 +160,9 @@
     <EmbeddedResource Include="Mappings\JobCandidate.hbm.xml" />
     <EmbeddedResource Include="Mappings\Location.hbm.xml" />
     <EmbeddedResource Include="Mappings\Password.hbm.xml" />
-    <EmbeddedResource Include="Mappings\Person.hbm.xml" />
+    <EmbeddedResource Include="Mappings\Person.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Mappings\PersonCreditCard.hbm.xml" />
     <EmbeddedResource Include="Mappings\PersonPhone.hbm.xml" />
     <EmbeddedResource Include="Mappings\PhoneNumberType.hbm.xml" />

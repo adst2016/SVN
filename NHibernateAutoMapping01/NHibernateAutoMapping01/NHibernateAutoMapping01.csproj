@@ -53,8 +53,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="Entities\Address.cs" />
+    <Compile Include="Entities\Entity.cs" />
+    <Compile Include="Entities\Person.cs" />
     <Compile Include="Entities\Product.cs" />
+    <Compile Include="Entities\Shelf.cs" />
     <Compile Include="FluentConfiguration.cs" />
+    <Compile Include="FluentConfiguration2.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
