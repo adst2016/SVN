@@ -5,6 +5,9 @@ using FluentNHibernate.Automapping;
 using NHibernateAutoMapping01.Entities;
 using NHibernate.Tool.hbm2ddl;
 using FluentNHibernate.Conventions.Helpers;
+using FluentMigrator.Runner.Announcers;
+using System;
+using FluentMigrator.Runner.Initialization;
 
 namespace NHibernateAutoMapping01
 {
@@ -12,7 +15,6 @@ namespace NHibernateAutoMapping01
     {
         public void CreateDataBase()
         {
-
             var cfg = new Configuration();
             cfg.Configure();
 
@@ -27,29 +29,15 @@ namespace NHibernateAutoMapping01
                 .ExposeConfiguration(TreatConfiguration)
                 .BuildSessionFactory();
 
+            string connectionString = cfg.GetProperty("connection.connection_string");
+
+            Runner.MigrateToLatest(connectionString);
+
             //var exporter = new SchemaExport(cfg);
             //exporter.Execute(true, true, false);
 
             //var updater = new SchemaUpdate(cfg);
             //updater.Execute(true, true);
-        }
-
-        public void CreateDataBase2()
-        {
-            var cfg = new Configuration();
-            cfg.Configure();
-
-            //var cfg2 = new FluentConfiguration2();
-
-            var autoMap = AutoMap.AssemblyOf<Entity>()
-            .Where(t => typeof(Entity).IsAssignableFrom(t));
-
-            var sessionFactory = Fluently.Configure(cfg)
-                .Mappings(m =>
-                m.AutoMappings
-                .Add(autoMap))
-                .ExposeConfiguration(TreatConfiguration)
-                .BuildSessionFactory();
         }
 
         private void TreatConfiguration(Configuration configuration)

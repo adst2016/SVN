@@ -30,6 +30,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FluentMigrator, Version=1.6.2.0, Culture=neutral, PublicKeyToken=aacfc7de5acabf05, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentMigrator.1.6.2\lib\40\FluentMigrator.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FluentMigrator.Runner">
+      <HintPath>..\packages\FluentMigrator.1.6.2\tools\FluentMigrator.Runner.dll</HintPath>
+    </Reference>
     <Reference Include="FluentNHibernate, Version=2.0.3.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\FluentNHibernate.2.0.3.0\lib\net40\FluentNHibernate.dll</HintPath>
       <Private>True</Private>
@@ -59,8 +66,9 @@
     <Compile Include="Entities\Product.cs" />
     <Compile Include="Entities\Shelf.cs" />
     <Compile Include="FluentConfiguration.cs" />
-    <Compile Include="FluentConfiguration2.cs" />
+    <Compile Include="PlatformMigration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Runner.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
