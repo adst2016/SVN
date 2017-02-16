@@ -7,19 +7,19 @@ using NHibernate.Tool.hbm2ddl;
 using FluentNHibernate.Conventions.Helpers;
 using FluentMigrator.Runner.Announcers;
 using System;
-using FluentMigrator.Runner.Initialization;
+
 
 namespace NHibernateAutoMapping01
 {
     public class Class1
     {
         public void CreateDataBase()
-        {
+        {            
             var cfg = new Configuration();
             cfg.Configure();
 
             var cfg2 = new FluentConfiguration();
-
+            
             var sessionFactory = Fluently.Configure(cfg)
                 .Mappings(m =>
                 m.AutoMappings
@@ -35,7 +35,7 @@ namespace NHibernateAutoMapping01
 
             //var exporter = new SchemaExport(cfg);
             //exporter.Execute(true, true, false);
-
+            
             //var updater = new SchemaUpdate(cfg);
             //updater.Execute(true, true);
         }

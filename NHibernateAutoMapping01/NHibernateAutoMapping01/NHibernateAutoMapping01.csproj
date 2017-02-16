@@ -61,7 +61,9 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="Entities\Address.cs" />
+    <Compile Include="Entities\Computer.cs" />
     <Compile Include="Entities\Entity.cs" />
+    <Compile Include="Entities\Monitor.cs" />
     <Compile Include="Entities\Person.cs" />
     <Compile Include="Entities\Product.cs" />
     <Compile Include="Entities\Shelf.cs" />
